@@ -237,7 +237,7 @@ body.showing #dust { z-index: 41; }
 
 <div class="gate" id="gate">
   <div class="rays"></div>
-  <div class="portrait"><img src="media/sourire.jpg" alt="SEA L'AMOUR"></div>
+  <div class="portrait"><img src="sourire.jpg" alt="SEA L'AMOUR"></div>
   <p class="eyebrow">Un cadeau t'attend</p>
   <h1 class="gold">Mon Anniversaire</h1>
   <div class="brand gold">SEA L'AMOUR</div>
@@ -309,7 +309,7 @@ body.showing #dust { z-index: 41; }
   </section>
 </main>
 
-<audio id="song" src="media/anniversaire.mp3" loop preload="auto"></audio>
+<audio id="song" src="anniversaire.mp3" loop preload="auto"></audio>
 
 <div class="show" id="show" aria-hidden="true">
   <div class="show-top">
@@ -474,19 +474,19 @@ body.showing #dust { z-index: 41; }
   /* Défilé automatique photos + vidéo */
   var show = document.getElementById('show'), stage = document.getElementById('stage'), segs = document.getElementById('segs');
   var items = [
-    { t: 'img', src: 'media/poster.jpg', alt: 'Affiche d\'anniversaire', cap: 'Le grand jour', sub: '11 novembre' },
-    { t: 'img', src: 'media/sourire.jpg', alt: 'SEA L\'AMOUR souriant', cap: 'Le sourire', sub: 'Simple, sûr de lui.' },
-    { t: 'img', src: 'media/code.jpg', alt: 'Du code sur un ordinateur', cap: 'Innover Plus Fort', sub: 'Du code, des idées, des sites.' },
-    { t: 'img', src: 'media/croquis.jpg', alt: 'Portrait dessiné au crayon', cap: 'Rêver Plus Grand', sub: 'Plus grand que le cadre.' },
-    { t: 'img', src: 'media/rouge.jpg', alt: 'SEA L\'AMOUR en t-shirt rouge', cap: 'Réussir Encore Plus', sub: 'Toujours en train de construire.' },
-    { t: 'vid', src: 'media/video.mp4', poster: 'media/video-poster.jpg', cap: 'Un mot de moi', sub: '' },
+    { t: 'img', src: 'poster.jpg', alt: 'Affiche d\'anniversaire', cap: 'Le grand jour', sub: '11 novembre' },
+    { t: 'img', src: 'sourire.jpg', alt: 'SEA L\'AMOUR souriant', cap: 'Le sourire', sub: 'Simple, sûr de lui.' },
+    { t: 'img', src: 'code.jpg', alt: 'Du code sur un ordinateur', cap: 'Innover Plus Fort', sub: 'Du code, des idées, des sites.' },
+    { t: 'img', src: 'croquis.jpg', alt: 'Portrait dessiné au crayon', cap: 'Rêver Plus Grand', sub: 'Plus grand que le cadre.' },
+    { t: 'img', src: 'rouge.jpg', alt: 'SEA L\'AMOUR en t-shirt rouge', cap: 'Réussir Encore Plus', sub: 'Toujours en train de construire.' },
+    { t: 'vid', src: 'video.mp4', poster: 'video-poster.jpg', cap: 'Un mot de moi', sub: '' },
     { t: 'end' }
   ];
   var IMG_MS = 5200, END_MS = 7000;
   var els = [], fills = [], vid = null;
   items.forEach(function (it, i) {
     var s = document.createElement('div'); s.className = 'slide' + (it.t === 'end' ? ' end' : '');
-    var bgsrc = it.t === 'vid' ? it.poster : (it.t === 'img' ? it.src : 'media/poster.jpg');
+    var bgsrc = it.t === 'vid' ? it.poster : (it.t === 'img' ? it.src : 'poster.jpg');
     var html = '<div class="bg" style="background-image:url(\'' + bgsrc + '\')"></div><div class="fg">';
     if (it.t === 'img') html += '<img class="ph" src="' + it.src + '" alt="' + it.alt + '">';
     if (it.t === 'vid') html += '<video playsinline preload="auto" poster="' + it.poster + '" src="' + it.src + '"></video>';
